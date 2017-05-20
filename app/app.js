@@ -1,14 +1,26 @@
-'use strict';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './app.css';
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+import bootstrap from 'bootstrap';
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+import angular from 'angular';
+import uirouter from 'angular-ui-router';
+
+import { routing, routingEventsLogger } from './app.config';
+
+import common from './common/common.module';
+
+import featureA from './feature-a/feature-a.module';
+import featureB from './feature-b/feature-b.module';
+
+const DEBUG = false;
+
+const app = angular
+    .module('app', [uirouter, common, featureA, featureB])
+    .config(routing);
+
+if (DEBUG) {
+    app
+        .run(routingEventsLogger)
+    ;
+}

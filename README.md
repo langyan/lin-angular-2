@@ -295,5 +295,32 @@ For more information on AngularJS please check out [angularjs.org][angularjs].
 [travis-docs]: https://docs.travis-ci.com/user/getting-started
 
 ## custom
+npm install webpack --save-dev
+npm install html-webpack-plugin --save-dev
+npm install extract-text-webpack-plugin --save-dev
+npm install autoprefixer --save-dev
+npm install babel-loader --save-dev
+npm install css-loader --save-dev
+npm install style-loader --save-dev
+npm install url-loader --save-dev
+npm install raw-loader --save-dev
+npm install file-loader --save-dev
+npm install --save-dev  webpack-dev-server
+npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react
+npm install --save-dev style-loader css-loader
+
+npm install angular --save
+npm install angular-route --save
+npm install angular-ui-router --save
+npm install angular-loader --save
+npm install angular-mocks --save
+npm install html5-boilerplate --save
+npm install bootstrap --save
+npm install jquery --save
+
+
+
+
+
 
 
